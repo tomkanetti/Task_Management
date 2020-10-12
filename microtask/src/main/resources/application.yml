@@ -1,0 +1,10 @@
+server:
+  port: ${APP_PORT:1122}
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: tomdb
+      username: ${MONGO_USERNAME:tom}
+      password: ${MONGO_PASSWORD:p123456}

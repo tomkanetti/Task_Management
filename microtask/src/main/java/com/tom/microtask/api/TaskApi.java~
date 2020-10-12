@@ -1,0 +1,26 @@
+package com.tom.microtask.api;
+
+
+import com.tom.microtask.bean.Task;
+import com.tom.microtask.controller.TaskController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("v1/task")
+public class TaskApi {
+
+
+    @Autowired
+    TaskController taskController;
+
+    @PostMapping("/create/task")
+    public ResponseEntity<?> createTask(@RequestBody Task task) throws Exception {
+        return taskController.createTask(task);
+    }
+
+}

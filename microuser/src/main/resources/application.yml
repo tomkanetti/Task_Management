@@ -1,0 +1,11 @@
+server:
+  port: ${APP_PORT:1234}
+spring:
+  data:
+    mongodb:
+#      uri: mongodb+srv://tomka:Tt12345678@cluster0.rdoiz.mongodb.net/myGW?retryWrites=true&w=majority
+      host: localhost
+      port: 27017
+      database: tomdb
+      username: ${MONGO_USERNAME:tom}
+      password: ${MONGO_PASSWORD:p123456}
